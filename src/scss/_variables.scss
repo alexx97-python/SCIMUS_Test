@@ -1,0 +1,19 @@
+//Variables
+$btn-background: #09bdae;
+$font-1: Roboto, Ubuntu, Cantarell, Helvetica ,sans-serif;
+$font-2: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+//Mixin 
+@mixin text-style ($color, $size, $case, $weight) {
+    color: $color;
+    font-size: $size;
+    text-transform: $case;
+    font-weight: $weight;
+}
+
+@mixin display-flex($direction, $justify, $align,){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

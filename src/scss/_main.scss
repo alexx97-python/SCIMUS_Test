@@ -1,0 +1,159 @@
+// Write your styles here
+@import "variables";
+
+body, h4{
+    margin: 0;
+    padding: 0;
+    font-family: $font-1;
+}
+a {
+    text-decoration: none;
+}
+header{
+    background: url('../img/header_background_v1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    .logo{
+        img{
+            height: 100px;
+            width: 150px;
+            position: absolute;
+            top: 0;
+            left: 10px;
+        }
+    }
+
+    nav{
+        height: 5vh;
+        margin-left: 40%;
+        @include display-flex(row, flex-end, null);
+        width: 60%;
+        a {
+            @include text-style(white, 15px, uppercase, 600);
+            text-align: center;
+            width: 33%;
+            border-right: 2px solid gray ;
+            padding: 10px;
+        }
+    }
+
+    section{
+        text-align: center;
+        margin-top: 20%;
+        h1{
+            width: 50%;
+            margin: 0 auto;
+            @include text-style(white, 26px, uppercase, null);
+        }
+
+        .btn-top{
+            display: block;
+            width: 175px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            @include text-style(white, 15px, uppercase, null);
+            background: rgba($color: $btn-background, $alpha: 1.0);
+        }
+    }
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    @include display-flex(column, null, null);
+
+    .toolbar, h1 {
+        text-align: right;
+        text-transform: uppercase;
+        input{
+            padding: 10px 10px;
+        }
+    }
+   
+    article {
+        margin-bottom: 25px;
+        display: flex;
+        background: rgba($color: #ada6a6, $alpha: 0.2);
+        padding: 10px;
+        .post{
+            padding: 5px;
+            .post-description{
+                color: red;
+                padding: 10px;
+                border-bottom: 1px solid gray;
+            }
+            h3{
+                color: $btn-background;
+                text-transform: uppercase;
+                margin: 5px;
+            }
+            p{
+                margin: 5px;
+            }
+        }
+        .btn {
+            display: block;
+            padding: 10px 50px;
+            margin-top: 30px;
+            margin-left: 75%;
+            background: $btn-background;
+            border: none;
+            @include text-style(white, 15px, uppercase, null);
+
+        }
+    }
+
+    .about{
+        font-size: 20px;
+        h1{
+            text-transform: uppercase;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .contact-form{
+        h1{
+            margin: 70px 0 20px 0;
+        }
+        h4{
+            margin: 10px;
+            text-align: right;
+            padding: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    form{
+        @include display-flex(column, null, null);
+        .email-adress-wrapper{
+            @include display-flex(row, space-between, null);
+            margin-bottom: 20px;
+            div{
+                width: 49%;
+                @include display-flex(column, null, null);
+                input{
+                    height: 30px;
+                }
+            }
+        };
+        label{
+            text-align: right;
+            margin-bottom: 5px;
+            color: $btn-background;
+        }
+
+        button{
+            width: 15%;
+            margin-top: 20px;
+            margin-left: 85%;
+            padding: 10px;
+            @include text-style(white, 15px, uppercase, null);
+            background: $btn-background;
+            border: none;
+        }
+    }
+}
